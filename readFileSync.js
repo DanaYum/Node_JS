@@ -5,7 +5,7 @@ const server=http.createServer((res,req)=>
     if(req.url==='/')
     {
         try{
-            const data=fs.readFile('FileSystem.example.txt','utf8');
+            const data=fs.readFileSync('FileSystem.example.txt','utf8');
             res.end('File content'+data);
         }
         catch (err){
